@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple P2E — Stack Game with QOM Rewards | Guppy's Guide</title>
+<meta name="description" content="A simple stack-building game for Android. Stack floors, chase the rankings, and earn QOM. Free to play, 3 plays a day.">
+<style>
+  :root{ --bg:#ffffff; --ink:#14202e; --sub:#5a6b7d; --line:#e3eaf1; --card:#f6f9fc; --accent:#1f6feb; --warn-bg:#fff7e0; --warn-line:#e8cf7a; --warn-ink:#6d5510; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif; background:var(--bg); color:var(--ink); line-height:1.65; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:24px 18px 56px; }
+  header{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .brand{ font-weight:700; letter-spacing:.02em; }
+  .brand small{ display:block; font-weight:400; color:var(--sub); letter-spacing:0; }
+  .lang{ color:var(--accent); text-decoration:none; font-size:.95rem; }
+  h1{ font-size:2rem; margin:26px 0 6px; }
+  .lead{ font-size:1.12rem; margin:0 0 14px; }
+  .badge{ display:inline-block; padding:4px 12px; border-radius:999px; background:#eef7ee; border:1px solid #bfe3bf; font-size:.85rem; font-weight:600; }
+  .warn{ background:var(--warn-bg); border:1px solid var(--warn-line); color:var(--warn-ink); border-radius:12px; padding:14px 16px; margin:20px 0; }
+  section{ margin:30px 0; }
+  h2{ font-size:1.25rem; margin:0 0 10px; }
+  .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; }
+  .card h3{ margin:0 0 6px; font-size:1.02rem; }
+  .card p{ margin:0; color:var(--sub); font-size:.95rem; }
+  p{ margin:0 0 10px; }
+  .muted{ color:var(--sub); }
+  a{ color:var(--accent); }
+  .dl{ display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; padding:12px 22px; border-radius:10px; margin:6px 10px 6px 0; }
+  .dl.sub{ background:#fff; color:var(--accent); border:1px solid var(--accent); }
+  footer{ margin-top:44px; padding-top:16px; border-top:1px solid var(--line); color:var(--sub); font-size:.9rem; }
+  footer a{ margin-right:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Guppy's Guide<small>Don't Panic — a hitchhiker's toolbox for 42 Chain &amp; QL1</small></div>
+    <a class="lang" href="ja.html">日本語</a>
+  </header>
+
+  <h1>Simple P2E — Stack &amp; Earn QOM</h1>
+  <p class="lead">A tiny stack-building game. Tap to drop the moving block, stack floors as high as you can, and climb the rankings.</p>
+  <span class="badge">APP v0.1.4 — PLAYABLE NOW (Android)</span>
+
+  <div class="warn">
+    <strong>Rewards are still being prepared.</strong> You can play and rank today, but QOM payouts are
+    <strong>not active yet</strong> (the distribution setup is pending), and paid extra plays cannot be bought yet.
+    This page will be updated when rewards go live.
+  </div>
+
+  <section>
+    <h2>Download</h2>
+    <a class="dl" href="https://github.com/QL1-Infinite42-Guppy-Histoire/simple-p2e/releases/download/v0.1.4/simple-p2e-v0.1.4.apk">Download the APK (v0.1.4)</a>
+    <a class="dl sub" href="https://github.com/QL1-Infinite42-Guppy-Histoire/simple-p2e">GitHub (source code)</a>
+    <p class="muted">Android only. This is an early beta — please use it at your own risk.</p>
+  </section>
+
+  <section>
+    <h2>How to play</h2>
+    <div class="cards">
+      <div class="card"><h3>Tap to stack</h3><p>A block slides back and forth. Tap to drop it — the part that lands on the stack below stays, the rest falls away. Miss completely and the game ends.</p></div>
+      <div class="card"><h3>PERFECT combos</h3><p>Land a block exactly and it counts as PERFECT: that floor scores double, and consecutive PERFECTs multiply further (up to ×4).</p></div>
+      <div class="card"><h3>Score = points</h3><p>Every floor has a point value. Your best score of the day becomes your points for the day.</p></div>
+      <div class="card"><h3>Rankings</h3><p>Daily rankings by best score, and season rankings by the total of all your plays. Seasons run in half-months (1st–15th / 16th–end, JST).</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Plays</h2>
+    <p>· <strong>3 free plays a day.</strong><br>
+    · Extra plays are planned to cost ZAP on 42 Chain: pay 10 ZAP × a tier (×1 to ×5) and that play's score is multiplied by the same tier. Of each payment, 30% is burned and 70% goes into the season reward pool. <span class="muted">(Not purchasable yet — the receiving wallet is being prepared.)</span></p>
+  </section>
+
+  <section>
+    <h2>Rewards (preparing)</h2>
+    <p>The planned rate is <strong>1 point = 1 QOM</strong>, paid as a hybrid: a small per-score payout for everyone, plus rank bonuses from the season pool for top players.
+    Rankings stay provisional until scores are reviewed, and only then are bonuses granted. Payouts are not active yet.</p>
+    <p class="muted">Guppy's Giveaway was cancelled on November 17, 2026 — its distribution role has moved to this game.</p>
+  </section>
+
+  <section>
+    <h2>Fair play</h2>
+    <p>Scores are not self-reported. The server replays your taps and recomputes the true score, so a forged score cannot be recorded.</p>
+  </section>
+
+  <footer>
+    <a href="https://ql1-infinite42-guppy-histoire.github.io/guppys-guide-dashboard/">Guppy's Guide dashboard</a>
+    <a href="https://ql1-infinite42-guppy-histoire.github.io/links/">Links hub</a>
+    <a href="https://github.com/QL1-Infinite42-Guppy-Histoire/simple-p2e">GitHub</a>
+    <p>Developed by the community. Not official. MIT License.</p>
+  </footer>
+</div>
+</body>
+</html>
